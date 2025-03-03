@@ -37,3 +37,28 @@ if (!$groupe) {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditer le Groupe</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <h1>Éditer le Groupe</h1>
+
+    <!-- Affichage du message d'état (erreur ou succès) -->
+    <?php if ($message): ?>
+        <div class="message"><?= $message ?></div>
+    <?php endif; ?>
+
+    <form action="" method="post"> <!-- Formulaire pour mettre à jour le groupe -->
+        Nom : <input type="text" name="nom" value="<?= htmlspecialchars($groupe['nom']) ?>" placeholder="Nom"><br><br>
+        <input type="submit" name="update" value="Mettre à jour"> <!-- Bouton de soumission -->
+    </form>
+
+    <a class="lien" href="./indexe.php">Retour</a> <!-- Lien pour revenir à la page d'index -->
+</body>
+</html>
