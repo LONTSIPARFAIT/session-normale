@@ -15,5 +15,5 @@ if (isset($_GET['id'])) {
      $req_delete = $pdo->prepare($sql);
 
      // Exécution de la requête de suppression
-     
+     if
 }
