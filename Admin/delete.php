@@ -10,12 +10,12 @@ if (isset($_GET['id'])) {
     // Conversion de l'ID en entier pour éviter les injections SQL
     $id = intval($_GET['id']); 
 
-     // Préparation de la requête SQL pour supprimer le groupe avec l'ID spécifié
-     $sql = "DELETE FROM `groupe` WHERE `id` = ?";
-     $req_delete = $pdo->prepare($sql);
+    // Préparation de la requête SQL pour supprimer le groupe avec l'ID spécifié
+    $sql = "DELETE FROM `groupe` WHERE `id` = ?";
+    $req_delete = $pdo->prepare($sql);
 
-     // Exécution de la requête de suppression
-     if ($req_delete->execute([$id])) {
+    // Exécution de la requête de suppression
+    if ($req_delete->execute([$id])) {
         // Message de succès si la suppression a réussi
         $message = "<p class='success'>Groupe supprimé avec succès.</p>";
     } else {
@@ -27,3 +27,4 @@ if (isset($_GET['id'])) {
     $message = "<p class='error'>ID du groupe non spécifié.</p>";
 }
 
+?>
