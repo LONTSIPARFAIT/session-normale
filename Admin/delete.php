@@ -22,4 +22,9 @@ if (isset($_GET['id'])) {
         // Message d'erreur si la suppression a échoué
         $message = "<p class='error'>Erreur lors de la suppression du groupe.</p>";
     }
+} else {
+    // Message d'erreur si l'ID du groupe n'est pas spécifié dans l'URL
+    $message = "<p class='error'>ID du groupe non spécifié.</p>";
 }
+
+?>
