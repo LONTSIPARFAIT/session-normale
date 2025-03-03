@@ -25,19 +25,23 @@ if (isset($_POST['create'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Créer un nouveau Groupe</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un nouveau Groupe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Créer un nouveau projet</h1>
+    <h1>Créer un nouveau groupe</h1>
+    
+    <?php if ($message): ?>
+        <div class="message"><?= $message ?></div>
+    <?php endif; ?>
 
-  <form action="" method="post">
-   Nom : <input type="text" name="nom" placeholder="Nom"><br><br>
-    <input type="submit" name="create" value="Créer">
-  </form>
+    <form action="" method="post">
+        Nom : <input type="text" name="nom" placeholder="Nom"><br><br>
+        <input type="submit" name="create" value="Créer">
+    </form>
 
-  <a class="lien" href="./indexe.php">Retour</a>
+    <a class="lien" href="./indexe.php">Retour</a>
 </body>
 </html>
