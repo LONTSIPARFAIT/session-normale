@@ -27,4 +27,3 @@ if (isset($_GET['id'])) {
     $message = "<p class='error'>ID du groupe non spécifié.</p>";
 }
 
-?>
