@@ -15,5 +15,11 @@ if (isset($_GET['id'])) {
      $req_delete = $pdo->prepare($sql);
 
      // Exécution de la requête de suppression
-     if
+     if ($req_delete->execute([$id])) {
+        // Message de succès si la suppression a réussi
+        $message = "<p class='success'>Groupe supprimé avec succès.</p>";
+    } else {
+        // Message d'erreur si la suppression a échoué
+        $message = "<p class='error'>Erreur lors de la suppression du groupe.</p>";
+    }
 }
