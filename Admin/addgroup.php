@@ -7,25 +7,18 @@ function clean_input($data) {
 }
 
 if (isset($_POST['create'])) {
-
   $nom = clean_input($_POST['nom']);
-  if ((empty($nom)) ) {
-     $message = "<p class='error'> Veuillez remplir tous les champs</p>";
-  }else {
-
-    $sql = "INSERT INTO `groupe`(`nom`) VALUES (?) " ;
-
-    $req_insert = $pdo->prepare($sql);
-
-    $req_insert->execute([$nom]);
- 
-
-    header('Location: indexe.php');
-    exit;
-  
-  
+  if (empty($nom)) {
+      $message = "<p class='error'>Veuillez remplir tous les champs</p>";
+  } else {
+      $sql = "INSERT INTO `groupe`(`nom`) VALUES (?)";
+      $req_insert = $pdo->prepare($sql);
+      $req_insert->execute([$nom]);
+      header('Location: indexe.php');
+      exit;
   }
 }
+?>
 
 ?>
 
