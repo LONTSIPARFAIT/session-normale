@@ -16,12 +16,16 @@ require_once '../db.php';
     <a href="./addgroup.php">Ajouter un groupe</a>
 
     <h3>Associer un menbre a un groupe</h3>
-    <select name="" id="">
-        <option value="">Selectionner un menbre</option>
-    </select><br><br>
-    <select name="" id="">
-        <option value="">Selectionner un groupe</option>
-    </select><br><br>
+    <select name="membre" id="membre">
+    <option value="">Sélectionner un membre</option>
+    <?php
+    // Exemple de code pour remplir la liste des membres
+    $membres = $db->query("SELECT * FROM membres");
+    foreach ($membres as $membre) {
+        echo "<option value='{$membre['id']}'>{$membre['nom']}</option>";
+    }
+    ?>
+</select><br><br>
     <a href="">Associer un membre</a>
 
     <h3>LIste des groupes</h3>
