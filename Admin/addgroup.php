@@ -2,9 +2,8 @@
 require_once '../db.php';
 $message = '';
 
-function clean_input($data){
-
-  return  htmlspecialchars(stripcslashes(trim($data)));
+function clean_input($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
 }
 
 if (isset($_POST['create'])) {
