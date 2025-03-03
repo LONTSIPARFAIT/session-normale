@@ -11,4 +11,5 @@ if (isset($_GET['id'])) {
     $id = intval($_GET['id']); 
 
      // Préparation de la requête SQL pour supprimer le groupe avec l'ID spécifié
+     $sql = "DELETE FROM `groupe` WHERE `id` = ?";
 }
