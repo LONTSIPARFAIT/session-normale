@@ -9,4 +9,6 @@ $message = '';
 if (isset($_GET['id'])) {
     // Conversion de l'ID en entier pour éviter les injections SQL
     $id = intval($_GET['id']); 
+
+     // Préparation de la requête SQL pour supprimer le groupe avec l'ID spécifié
 }
