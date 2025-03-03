@@ -12,4 +12,8 @@ if (isset($_GET['id'])) {
 
      // Préparation de la requête SQL pour supprimer le groupe avec l'ID spécifié
      $sql = "DELETE FROM `groupe` WHERE `id` = ?";
+     $req_delete = $pdo->prepare($sql);
+
+     // Exécution de la requête de suppression
+     
 }
