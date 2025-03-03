@@ -28,3 +28,24 @@ if (isset($_GET['id'])) {
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppression de Groupe</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <h1>Suppression de Groupe</h1>
+
+    <!-- Affichage du message (success ou error) -->
+    <?php if ($message): ?>
+        <div class="message"><?= $message ?></div>
+    <?php endif; ?>
+
+    <!-- Lien pour revenir à la page d'index des groupes -->
+    <a class="lien" href="./indexe.php">Retour</a>
+</body>
+</html>
