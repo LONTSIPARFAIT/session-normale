@@ -39,7 +39,7 @@ if (isset($_POST['create'])) {
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Créer un nouveau projet</h1>
+  <h1>Créer un nouveau</h1>
 
   <form action="" method="post">
    Nom : <input type="text" name="nom" placeholder="Nom"><br><br>
